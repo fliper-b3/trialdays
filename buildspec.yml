@@ -10,7 +10,7 @@ phases:
       - REPOSITORY_URI=619401400486.dkr.ecr.us-east-1.amazonaws.com/trialday
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
-      - echo "{IMAGE_TAG: $IMAGE_TAG\n COMMIT_HASH: $COMMIT_HASH\n REPOSITORY_URI: $REPOSITORY_URI}"
+      - echo "{\n\tIMAGE_TAG=$IMAGE_TAG\n\t COMMIT_HASH=$COMMIT_HASH\n\t REPOSITORY_URI=$REPOSITORY_URI\n}"
   build:
     commands:
       - echo Build started on `date`
