@@ -29,6 +29,8 @@ phases:
       - ls -la
       - mkdir /root/.kube
       - cp .config.k8s /root/.kube/config
+      - export KUBECONFIG=/root/.kube/config
+      - printenv
       - helm list
 artifacts:
     files: imagedefinitions.json
