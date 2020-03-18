@@ -30,7 +30,6 @@ phases:
       - printenv
       - cat ${KUBECONFIG}
       - kubectl config view --flatten
-      - kubectl get nodes
-      - helm list
+      - helm list -v20
 artifacts:
     files: imagedefinitions.json
