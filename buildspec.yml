@@ -29,7 +29,7 @@ phases:
       - export KUBECONFIG=$(pwd)/.config.k8s
       - printenv
       - cat ${KUBECONFIG}
-      - kubectl version
+      - kubectl config view --flatten
       - helm list
 artifacts:
     files: imagedefinitions.json
