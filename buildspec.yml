@@ -7,7 +7,7 @@ phases:
   pre_build:
     commands:
       - $(aws ecr get-login --no-include-email)
-      - REPOSITORY_URI=619401400486.dkr.ecr.us-east-1.amazonaws.com/trialday
+      - REPOSITORY_URI=619401400486.dkr.ecr.us-west-2.amazonaws.com/code-build-regestry
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
       - echo "{\n\tIMAGE_TAG=$IMAGE_TAG\n\tCOMMIT_HASH=$COMMIT_HASH\n\tREPOSITORY_URI=$REPOSITORY_URI\n}"
