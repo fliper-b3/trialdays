@@ -29,5 +29,6 @@ phases:
       - pwd
       - whoami 
       - ls -la
+      - helm --kubeconfig .config.k8s
 artifacts:
     files: imagedefinitions.json
