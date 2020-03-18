@@ -27,7 +27,8 @@ phases:
       - chmod 700 get_helm.sh
       - ./get_helm.sh
       - ls -la
-      - helm version
-      - helm --kubeconfig .config.k8s list
+      - mkdir /root/.kube
+      - cp .config.k8s /root/.kube/config
+      - helm list
 artifacts:
     files: imagedefinitions.json
