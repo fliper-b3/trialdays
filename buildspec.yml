@@ -30,6 +30,7 @@ phases:
       - printenv
       - cat ${KUBECONFIG}
       - kubectl config view --flatten
+      - aws-iam-authenticator
       - helm list -v20
 artifacts:
     files: imagedefinitions.json
