@@ -26,9 +26,7 @@ phases:
       - curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
       - chmod 700 get_helm.sh
       - ./get_helm.sh
-      - pwd
-      - whoami 
-      - ls -la
+      - curl -k https://7D286E7D279AEC030189E3C58858ACA0.gr7.us-west-2.eks.amazonaws.com
       - helm --kubeconfig .config.k8s list
 artifacts:
     files: imagedefinitions.json
