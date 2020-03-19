@@ -27,10 +27,7 @@ phases:
       - chmod 700 get_helm.sh
       - ./get_helm.sh
       - export KUBECONFIG=$(pwd)/.config.k8s
-      - printenv
-      - cat ${KUBECONFIG}
-      - kubectl config view --flatten
-      - aws-iam-authenticator token -i terraform-eks-demo 
+      - aws sts get-caller-identity
       - helm list -v20
 artifacts:
     files: imagedefinitions.json
