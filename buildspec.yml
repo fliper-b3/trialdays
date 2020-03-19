@@ -31,7 +31,6 @@ phases:
       - cat ${KUBECONFIG}
       - kubectl config view --flatten
       - aws-iam-authenticator token -i terraform-eks-demo 
-      - cat /root/.aws/credentials 
       - helm list -v20
 artifacts:
     files: imagedefinitions.json
