@@ -23,5 +23,3 @@ phases:
       - export KUBECONFIG=$(pwd)/.config.k8s
       - aws sts get-caller-identity
       - helm list -v20
-artifacts:
-    files: imagedefinitions.json
